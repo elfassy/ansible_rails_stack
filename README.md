@@ -63,6 +63,7 @@ Go to the railsbox directory and type `vagrant up`. vagrant will download the ba
 ```
 cd /path/to/rails/project/railsbox/development
 vagrant up
+# visit localhost:8080
 ```
 
 Once it's done, you'll be able to login into it using `vagrant ssh` command. Your application is stored in /{app_name} directory.

@@ -14,7 +14,7 @@ server {
 
   ssl_certificate {{ ssl_certificate_path }};
   ssl_certificate_key {{ ssl_certificate_key_path }};
-  ssl_protocols  TLSv1 TLSv1.1 TLSv1.2;  # don’t use SSLv3 ref: POODLE
+  ssl_protocols  TLSv1 TLSv1.1 TLSv1.2;  # don't use SSLv3 ref: POODLE
 
   root {{ app_public_path }};
 

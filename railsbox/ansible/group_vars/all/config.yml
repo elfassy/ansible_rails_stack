@@ -59,16 +59,16 @@ ssl_certificate_path: /etc/nginx/ssl/{{ server_name }}.crt
 ssl_certificate_key_path: /etc/nginx/ssl/{{ server_name }}.key
 
 releases_path: '{{ path }}/releases'
-shared_path: '{{ path }}/shared'
+shared_path: '{{ app_path if target == "virtualbox" else path }}/shared'
 
 app_path: '{{ path }}{{ "/current" if target != "virtualbox" else "" }}'
 app_public_path: "{{ app_path }}/public"
 app_config_path: '{{ app_path }}/config'
-shared_config_path: '{{ app_path if target == "virtualbox" else shared_path }}/config'
-app_temp_path: "/tmp{{ app_path }}"
+shared_config_path: '{{shared_path}}/config'
+app_temp_path: "{{shared_path}}/tmp"
 app_logs_path: "{{ app_path }}/log"
 
-unicorn_sock_path: "/tmp/unicorn.{{ rails_env }}.sock"
+unicorn_sock_path: "{{app_temp_path}}/sockets/unicorn.{{ rails_env }}.sock"
 unicorn_config_path: "{{ app_config_path }}/unicorn.{{ rails_env }}.rb"
 unicorn_pid_path: "{{ app_temp_path }}/unicorn.{{ rails_env }}.pid"
 unicorn_stderr_path: "{{ app_logs_path }}/unicorn.err.log"
