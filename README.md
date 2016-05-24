@@ -27,10 +27,12 @@ Or install it yourself as:
 ### VM
 Virtual machine can be controlled by running the following commands:
 
+```
 vagrant up                      # To start VM
 vagrant provision               # To re-run ansible playbook
 vagrant halt                    # To stop VM
 vagrant destroy                 # To destroy VM completely
+```
 
 ### puma
 You can start and stop puma by running standard upstart commands:
@@ -48,7 +50,7 @@ You will need VirtualBox, vagrant and ansible to be installed. ansible also requ
 Fast way to install VirtualBox and vagrant is to use brew cask. ansible can be installed with homebrew as well:
 
 ```
-brew install caskroom/cask/brew-cask
+# brew install caskroom/cask/brew-cask
 brew cask install virtualbox
 brew cask install vagrant
 brew install ansible
@@ -56,7 +58,7 @@ brew install ansible
 
 
 ### Start VM
-Go to the railsbox directory and type vagrant up. vagrant will download the base box and provision it with ansible using your configuration.
+Go to the railsbox directory and type `vagrant up`. vagrant will download the base box and provision it with ansible using your configuration.
 
 ```
 cd /path/to/rails/project/railsbox/development
