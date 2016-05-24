@@ -1,3 +1,6 @@
+# WIP
+use at your own risk
+
 # Ansible Rails Stack
 
 - Puma
@@ -11,16 +14,13 @@
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'ansible_rails_stack'
+gem 'ansible_rails_stack', github: 'elfassy/ansible_rails_stack'
 ```
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install ansible_rails_stack
 
 
 ## Control
